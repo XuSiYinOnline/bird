@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+    <title>飞鸟和云</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/Background.css">
+    <script type = "text/javascript" src = "javascript/jquery.min.js"></script>	
+	<script type = "text/javascript" src="javascript/Background.js"></script>
+	<script type= "text/javascript">
+		$(document).ready(function(){
+			$(".Backgrounds").Backgrounds({
+				birds:'3',
+				size:'12',
+				interval : '30',
+				velocity : '3',
+				color : 'rgb(0, 0, 0, 255)' 
+			});
+		})
+	</script>
+    <script type="text/javascript">
+function browserRedirect() { 
+var sUserAgent= navigator.userAgent.toLowerCase(); 
+  var bIsIpad= sUserAgent.match(/ipad/i) == "ipad"; 
+var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os"; 
+var bIsMidp= sUserAgent.match(/midp/i) == "midp"; 
+var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4"; 
+var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb"; 
+var bIsAndroid= sUserAgent.match(/android/i) == "android"; 
+var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce"; 
+var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
+if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {window.location.href= 'https://www.xusiyin.com/phone.php'; 
+} else { 
+} 
+} 
+browserRedirect(); 
+    </script>
+	<script>
+var audio = new Audio("music/BGM.mp3");
+
+document.onclick = function() {
+  audio.play();
+}
+document.ondblclick=function() {
+    audio.pause();
+}
+    </script>
+    </head>
+    <body>
+    <embed name="BGM" src="music/BGM.mp3" loop="true" hidden="true" autostart="true">
+        <div id="clouds">
+            <div class="cloud c1"></div>
+            <div class="cloud c2"></div>
+            <div class="cloud c3"></div>
+            <div class="cloud c4"></div>
+            <div class="cloud c5"></div>
+        </div>
+	    <div class = "Backgrounds">
+		<canvas id = "Backgrounds"></canvas>
+	    </div>
+
+    </body>
+    <iframe src="bgm.html"width="0px" height="0px" scrolling="no"</iframe>
+</html>
